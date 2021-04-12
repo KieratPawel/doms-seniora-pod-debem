@@ -1,0 +1,27 @@
+$base-color: #653430;
+$base-color-light: #ddd;
+$theme-color: #fff;
+$theme-color2: #fff;
+
+$sizes: (
+  horizontal: (
+    orientation: landscape,
+  ),
+  desktop: (
+    min-width: 1024px,
+  ),
+  desktop-big: (
+    min-width: 1420px,
+  ),
+);
+
+@mixin media($size) {
+  $size: map-get($sizes, $size);
+  @if ($size) {
+    @media #{$size} {
+      @content;
+    }
+  } @else {
+    @error 'Missing size';
+  }
+}

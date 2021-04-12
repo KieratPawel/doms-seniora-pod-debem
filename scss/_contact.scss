@@ -1,0 +1,64 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 10px;
+    @include media(horizontal) {
+      flex-direction: row;
+      margin-top: 0;
+    }
+    @include media(desktop) {
+      flex-direction: row;
+      margin-top: 20px;
+    }
+  }
+  &__info {
+    padding-left: 20px;
+    @include media(horizontal) {
+      width: 50%;
+    }
+    @include media(desktop) {
+      margin-top: 20px;
+      width: 50%;
+      &:nth-of-type(1) {
+        padding-left: 25%;
+      }
+    }
+  }
+  &__line {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @include media(horizontal) {
+      margin-bottom: 10px;
+    }
+    @include media(desktop) {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+  }
+  &__link,
+  &__phone,
+  &__mail {
+    color: $base-color;
+    text-decoration: none;
+  }
+  &__map {
+    flex-basis: 50%;
+    width: 100%;
+  }
+  &__iframe {
+    border: none;
+    filter: grayscale(30%);
+  }
+  &__footer {
+    padding: 8px;
+    background-color: $base-color;
+    color: $base-color-light;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

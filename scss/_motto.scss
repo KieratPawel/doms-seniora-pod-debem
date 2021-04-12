@@ -1,0 +1,40 @@
+.motto {
+  display: flex;
+  flex-direction: column;
+  &__background {
+    flex-grow: 1;
+    background-image: url("../images/motto.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__shutter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 20, 20, 0.6);
+  }
+  &__phrase {
+    width: 90%;
+    color: $base-color-light;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    @include media(horizontal) {
+      width: 70%;
+    }
+    @include media(desktop) {
+      font-size: 2.5rem;
+    }
+  }
+  &__author {
+    font-size: 2.2rem;
+    line-height: 3;
+    @include media(desktop) {
+      font-size: 2.7rem;
+    }
+  }
+}
